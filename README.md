@@ -1,4 +1,4 @@
-# Helloblock::Ruby
+# HelloBlock
 
 Ruby wrapper for the [HelloBlock.io](http://helloblock.io) API.
 
@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initialize the HelloBlock client, and set the network to testnet or mainnet.
+
+```rb
+block = HelloBlock::Client.new
+block.network = :mainnet # defaults to :testnet
+```
+
+Methods
+
+Description  | Method
+------------- | ------------- |
+Batch get addresses  | `block.addresses(addresses: ['ADDRESS1', 'ADDRESS2'])`|
+Batch get unspents  | `block.unspents(addresses: ['ADDRESS1', 'ADDRESS2'])` |
 
 ## Contributing
 
