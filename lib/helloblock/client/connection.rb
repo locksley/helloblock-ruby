@@ -32,7 +32,3 @@ module HelloBlock
     end
   end
 end
-
-
-
-
