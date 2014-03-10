@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'helloblock/ruby/version'
+require 'helloblock/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "helloblock-ruby"
-  spec.version       = Helloblock::Ruby::VERSION
+  spec.version       = HelloBlock::VERSION
   spec.authors       = ["Nathaniel Wroblewski"]
   spec.email         = ["nathanielwroblewski@gmail.com"]
   spec.description   = %q{Ruby wrapper for the HelloBlock.io API}
