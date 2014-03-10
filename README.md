@@ -25,12 +25,11 @@ block = HelloBlock::Client.new
 block.network = :mainnet # defaults to :testnet
 ```
 
-Methods
-
 Description  | Method
 ------------- | ------------- |
 Batch get addresses  | `block.addresses(addresses: ['ADDRESS1', 'ADDRESS2'])`|
 Batch get unspents  | `block.unspents(addresses: ['ADDRESS1', 'ADDRESS2'])` |
+Batch get transactions | `block.transactions(addresses: ['ADDRESS1', 'ADDRESS2'])`
 
 ## Contributing
 
