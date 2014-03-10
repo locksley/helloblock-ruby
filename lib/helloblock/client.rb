@@ -16,16 +16,12 @@ module HelloBlock
 
     end
 
-    def env
-      @env ||= :development
+    def network
+      @env ||= :testnet # :mainnet
     end
 
     def target_url
-      case env
-      when :development then Endpoints::DEVELOPMENT_ENDPOINT
-      when :test        then Endpoints::TEST_ENDPOINT
-      when :production  then Endpoints::PRODUCTION_ENDPOINT
-      end
+      "http://#{network}.helloblock.io"
     end
   end
 end

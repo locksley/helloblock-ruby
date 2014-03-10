@@ -3,14 +3,14 @@ module HelloBlock
     module Request
 
       def get(path, params={})
-        request(:get, path, params, headers)
+        request(:get, Endpoints::API_VERSION + path, params, headers)
       end
 
       def post(path, params={})
-        request(:post, path, params, headers)
+        request(:post, Endpoints::API_VERSION + path, params, headers)
       end
 
-      # private
+      private
 
       def request(method, path, params={}, headers={})
         response = connection.send(method.to_sym, path, params, headers)

@@ -5,7 +5,7 @@ module HelloBlock
     module Connection
       attr_writer :connection_options
 
-      # private
+      private
 
       def connection
         @connection ||= Faraday.new(target_url, connection_options) do |connection|
