@@ -8,7 +8,7 @@ module HelloBlock
       private
 
       def connection
-        @connection ||= Faraday.new(target_url, connection_options) do |connection|
+        @connection ||= Faraday.new(base_url, connection_options) do |connection|
           connection.request :json
           connection.response :json
           connection.use FaradayMiddleware::Rashify

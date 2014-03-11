@@ -2,8 +2,6 @@ module HelloBlock
   class Client
     module Endpoints
 
-      API_VERSION                   = '/v1'
-
       ADDRESSES_PATH                = '/addresses/'
       UNSPENTS_PATH                 = '/addresses/unspents'
       TRANSACTIONS_FOR_ADDRESS_PATH = '/addresses/transactions'
@@ -17,6 +15,10 @@ module HelloBlock
       WITHDRAWAL_PATH               = '/withdrawal' # POST
 
       POST_REQUESTS                 = [:propagate, :withdrawal]
+
+      def base_url
+        "http://#{network}.helloblock.io"
+      end
 
       # client.unspents(addresses: ...) => method_missing(:unspents, addresses: ... )
 

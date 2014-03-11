@@ -3,11 +3,11 @@ module HelloBlock
     module Request
 
       def get(path, params={})
-        request(:get, Endpoints::API_VERSION + path, params, headers)
+        request(:get, path, params, headers)
       end
 
       def post(path, params={})
-        request(:post, Endpoints::API_VERSION + path, params, headers)
+        request(:post, path, { body: params }, headers)
       end
 
       private
