@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://testnet.helloblock.io/transactions
+    body:
+      encoding: UTF-8
+      string: '{"body":{"body":{"raxTxHash":""}}}'
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - HelloBlock Ruby Gem 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 11 Mar 2014 08:40:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '144'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d0163bf5aff3ca6457f8a8c3ba34a4a2f1394527209650; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.helloblock.io; HttpOnly
+      X-Powered-By:
+      - Express
+      Cf-Ray:
+      - 1096721458b6070d-SJC
+    body:
+      encoding: UTF-8
+      string: '{"status":"fail","message":"No transaction hex given. Note: Hex must
+        be in the body of the post request and not as a query string","details":[]}'
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 08:40:09 GMT
+recorded_with: VCR 2.8.0

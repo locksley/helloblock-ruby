@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://testnet.helloblock.io/transactions?txHashes=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - HelloBlock Ruby Gem 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 11 Mar 2014 08:40:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '64'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4765db974f36eaf5b2f70a55e86d3f381394527209293; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.helloblock.io; HttpOnly
+      Etag:
+      - '"279040391"'
+      X-Powered-By:
+      - Express
+      Cf-Ray:
+      - 10967212116c070d-SJC
+    body:
+      encoding: UTF-8
+      string: '{"status":"fail","message":"No Transactions Given","details":[]}'
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 08:40:09 GMT
+recorded_with: VCR 2.8.0

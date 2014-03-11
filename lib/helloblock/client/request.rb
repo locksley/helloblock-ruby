@@ -13,7 +13,7 @@ module HelloBlock
       private
 
       def request(method, path, params={}, headers={})
-        format_batches(params)
+        format_batches(params) if params
         connection.send(method.to_sym, path, params, headers).body
       end
 

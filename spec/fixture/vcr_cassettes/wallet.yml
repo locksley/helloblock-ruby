@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://testnet.helloblock.io/wallet?addresses=1DQN9nopGvSCDnM3LH1w7j36FtnQDZKnej
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - HelloBlock Ruby Gem 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 11 Mar 2014 08:40:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d14cd790bd5116dd0945af7f2ed034f101394527210092; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.helloblock.io; HttpOnly
+      X-Powered-By:
+      - Express
+      Cf-Ray:
+      - 109672171193070d-SJC
+    body:
+      encoding: UTF-8
+      string: '{"status":"success","data":{"summary":{"transactionsCount":0,"totalReceivedValue":0,"totalSentValue":0,"balance":0},"addresses":[{"totalReceivedValue":0,"totalReceivedCount":0,"totalSentValue":0,"totalSentCount":0,"balance":0,"transactionsCount":0,"address":"msvKSqto5wsSztpf3qzJweFR7tP76etSew","hash160":"880cbba2942bc34739fbd2d8d792a6ce607ef3b9"}],"exchangeRates":{"BTCUSD":{"mtgox":133.10734,"bitstamp":631,"btce":621}},"latestBlock":{"blockHeight":204357,"blockHash":"00000000ec714889ab873657397c57f91c312ebf8a624486e79d744b3ed2febd","blockTime":1394528547,"previousBlockHash":"000000002cade2b04e2968f43d19c80e8f0cd1abb413da9a35a8736d9fc8a6b5","bits":486604799,"version":2,"merkleRootHash":"8334e8b4ce06aa727f48e4b0e164d107fc6fe90c76fdb47ebdeafab8a8ce1dd8","nonce":2768450816,"totalInputsValue":262306630652,"totalOutputsValue":267306630652,"transactionsCount":23,"confirmations":1},"transactions":[]}}'
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 08:40:10 GMT
+recorded_with: VCR 2.8.0

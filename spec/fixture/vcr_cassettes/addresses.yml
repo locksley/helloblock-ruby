@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://testnet.helloblock.io/addresses/?addresses=1DQN9nopGvSCDnM3LH1w7j36FtnQDZKnej
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - HelloBlock Ruby Gem 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 11 Mar 2014 08:23:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d664258a348122c961459c49b3f0cc08a1394526187048; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.helloblock.io; HttpOnly
+      X-Powered-By:
+      - Express
+      Cf-Ray:
+      - 1096591d050c0651-SJC
+    body:
+      encoding: UTF-8
+      string: '{"status":"fail","message":"The endpoint you are looking for does not
+        exist!","details":[]}'
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 08:23:07 GMT
+recorded_with: VCR 2.8.0

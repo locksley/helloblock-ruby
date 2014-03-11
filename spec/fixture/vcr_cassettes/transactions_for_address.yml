@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://testnet.helloblock.io/addresses/transactions?addresses=1DQN9nopGvSCDnM3LH1w7j36FtnQDZKnej
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - HelloBlock Ruby Gem 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 11 Mar 2014 08:26:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '47'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dde156a9e0d6072fe3ebd82a78ceff6e11394526378443; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.helloblock.io; HttpOnly
+      Etag:
+      - '"576461842"'
+      X-Powered-By:
+      - Express
+      Cf-Ray:
+      - 10965dc94adb0651-SJC
+    body:
+      encoding: UTF-8
+      string: '{"status":"success","data":{"transactions":[]}}'
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 08:26:18 GMT
+recorded_with: VCR 2.8.0

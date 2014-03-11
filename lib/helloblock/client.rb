@@ -17,9 +17,5 @@ module HelloBlock
     def network
       @env ||= :testnet # :mainnet
     end
-
-    def target_url
-      "http://#{network}.helloblock.io"
-    end
   end
 end

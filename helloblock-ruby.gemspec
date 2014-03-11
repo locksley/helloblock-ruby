@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec',          '~> 2.14'
   spec.add_development_dependency 'webmock',        '~> 1.17'
+  spec.add_development_dependency 'vcr',            '~> 2.8'
   spec.add_development_dependency 'guard-rspec',    '~> 4.2'
 
   spec.add_runtime_dependency 'multi_json',         '~> 1.9'

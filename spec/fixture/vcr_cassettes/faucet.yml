@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://testnet.helloblock.io/faucet?type=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - HelloBlock Ruby Gem 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 11 Mar 2014 08:40:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de2567497499f3e146f152cad910d824b1394527210396; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.helloblock.io; HttpOnly
+      X-Powered-By:
+      - Express
+      Cf-Ray:
+      - 10967218f2820651-SJC
+    body:
+      encoding: UTF-8
+      string: '{"status":"success","data":{"privateKeyWIF":"92iusiayAuJYFNPZiPMTS38AhgBYgdYQxMRh9479ayjMPxkCmU1","privateKeyHex":"95d98c8d17c7823d7a55a543ede007cd38d0b6ffd94a382b73b7e7c0a0e95aec","address":"mkh5mguJjf9RKNYoU6eRxb4k8mbr1U175D","hash160":"38c307920ed2a0cb53a021ff5d3407aa5aac2c08","faucetType":3,"unspents":[{"confirmations":11704,"blockHeight":192654,"txHash":"b3ea79f7f0d0ee55853ad1587b3848f428d5c7cb318641bd461368e23a05ea6b","index":0,"scriptPubKey":"76a91438c307920ed2a0cb53a021ff5d3407aa5aac2c0888ac","type":"pubkeyhash","value":100000,"hash160":"38c307920ed2a0cb53a021ff5d3407aa5aac2c08","address":"mkh5mguJjf9RKNYoU6eRxb4k8mbr1U175D"},{"confirmations":11704,"blockHeight":192654,"txHash":"9cd62ac433117f09ba0707346d28df6d9f3b1bb02b1ef0cc46f19c0fda1bad68","index":0,"scriptPubKey":"76a91438c307920ed2a0cb53a021ff5d3407aa5aac2c0888ac","type":"pubkeyhash","value":50000,"hash160":"38c307920ed2a0cb53a021ff5d3407aa5aac2c08","address":"mkh5mguJjf9RKNYoU6eRxb4k8mbr1U175D"},{"confirmations":11704,"blockHeight":192654,"txHash":"b381965d5fecafefca829d50a5b6f4553b3eb6e0c20cddd1ab41a50f860fb43c","index":0,"scriptPubKey":"76a91438c307920ed2a0cb53a021ff5d3407aa5aac2c0888ac","type":"pubkeyhash","value":10000,"hash160":"38c307920ed2a0cb53a021ff5d3407aa5aac2c08","address":"mkh5mguJjf9RKNYoU6eRxb4k8mbr1U175D"}]}}'
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 08:40:11 GMT
+recorded_with: VCR 2.8.0
