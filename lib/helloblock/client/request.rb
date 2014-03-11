@@ -14,12 +14,11 @@ module HelloBlock
 
       def request(method, path, params={}, headers={})
         format_batches(params)
-        binding.pry
         connection.send(method.to_sym, path, params, headers).body
       end
 
       def headers
-        { accept: '*/*', content_type: 'application/x-www-form-urlencoded; charset=UTF-8' }
+        { accept: '*/*', content_type: 'application/json; charset=UTF-8' }
       end
 
       def format_batches(params)

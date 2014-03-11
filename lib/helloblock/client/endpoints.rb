@@ -2,11 +2,21 @@ module HelloBlock
   class Client
     module Endpoints
 
-      API_VERSION       = '/v1'
+      API_VERSION                   = '/v1'
 
-      ADDRESSES_PATH    = '/addresses/'
-      UNSPENTS_PATH     = '/addresses/unspents'
-      TRANSACTIONS_PATH = '/addresses/transactions'
+      ADDRESSES_PATH                = '/addresses/'
+      UNSPENTS_PATH                 = '/addresses/unspents'
+      TRANSACTIONS_FOR_ADDRESS_PATH = '/addresses/transactions'
+      TRANSACTIONS_PATH             = '/transactions'
+      LATEST_TRANSACTION_PATH       = '/transactions/latest'
+      PROPAGATE_PATH                = '/transactions' # POST
+      BLOCKS_PATH                   = '/blocks'
+      LATEST_BLOCKS_PATH            = '/blocks/latest'
+      WALLET_PATH                   = '/wallet'
+      FAUCET_PATH                   = '/faucet'
+      WITHDRAWAL_PATH               = '/withdrawal' # POST
+
+      POST_REQUESTS                 = [:propagate, :withdrawal]
 
       # client.unspents(addresses: ...) => method_missing(:unspents, addresses: ... )
 
@@ -24,7 +34,11 @@ module HelloBlock
 
       def navigate_to_path(method, *args)
         path = Endpoints.const_get("#{method.upcase}_PATH".to_sym)
-        get(path, args[0])
+        post_request?(method) ? post(path, body: args[0]) : get(path, args[0])
+      end
+
+      def post_request?(method)
+        POST_REQUESTS.include?(method)
       end
     end
   end

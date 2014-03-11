@@ -1,16 +1,14 @@
 require 'helloblock/client/connection'
 require 'helloblock/client/request'
 require 'helloblock/client/endpoints'
-require 'helloblock/client/addresses'
 
 module HelloBlock
   class Client
-    attr_writer :env
+    attr_writer :network
 
     include Connection
     include Request
     include Endpoints
-    include Addresses
 
     def initialize
 

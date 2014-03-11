@@ -28,8 +28,16 @@ block.network = :mainnet # defaults to :testnet
 Description  | Method
 ------------- | ------------- |
 Batch get addresses  | `block.addresses(addresses: ['ADDRESS1', 'ADDRESS2'])`|
-Batch get unspents  | `block.unspents(addresses: ['ADDRESS1', 'ADDRESS2'])` |
-Batch get transactions | `block.transactions(addresses: ['ADDRESS1', 'ADDRESS2'])`
+Batch get unspents  | `block.unspents(addresses: [...])` |
+Batch get transactions from address | `block.transactions_for_address(addresses: [...])`
+Batch get transactions | `block.transactions(txHashes: [...])` |
+Get latest transactions | `block.latest_transaction` |
+Post transaction propagation | `block.propagate(rawTxHash: '...')` |
+Get block | `block.blocks(blockId: '...')` |
+Get latest block | `block.latest_blocks` |
+Get wallet info | `block.wallet(addresses: [...])` |
+Get faucet coins | `block.faucet(type: 3)` |
+Post coins withdrawal | `block.withdrawal(amount: 100000, toAddress: '...')` |
 
 ## Contributing
 

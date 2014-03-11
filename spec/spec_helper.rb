@@ -1,3 +1,3 @@
-require 'helloblock-ruby'
+require 'helloblock'
 require 'rspec'
 require 'webmock/rspec'
